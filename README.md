@@ -1,7 +1,7 @@
 # M910Q_Hackintosh
 ## Lenovo M910Q tiny 
-This M910Q bought 2nd hand from ebay with :
-* Intel(R) Core(TM) i5-7500T CPU @ 2.70GHz   2.71 GHz, Kaby Lake
+This M910Q bought used with :
+* Intel(R) Core(TM) i5-7500T CPU @ 2.70GHz , Kaby Lake platform
 * HYNIX 8G DDR4
 * SAMSUNG 250G SSD
 
@@ -38,8 +38,8 @@ Tools:
   * NVMeFix.kext
   * SMCProcessor.kext
   * SMCSuperIO.kext
-  * USBToolBox.kext (for USB ports mapping, created later)
-  * UTBMap.kext (for USB ports mapping, created later)
+  * USBToolBox.kext (for USB ports mapping, created in later step)
+  * UTBMap.kext (for USB ports mapping, created in later step)
   * VirtualSMC.kext
   * WhateverGreen.kext
   * XHCI-unsupported.kext
@@ -49,7 +49,7 @@ Tools:
   * Turn on Legacy support
   * Turn on XHCI support( I forgot exact name, but should not matter)
 ### Hard disk partation and EFI transfer
-I install dual boot on one SSD disk. This M910Q come with a Windows 10 installed on one partation assigned to C:, the partation table looks like the table below, a recovery partation about 1G at the tail of the disk but I don't care:  
+I install dual boot on one SSD disk. This M910Q come with a Windows 10 Pro preinstalled on one partation assigned to C:, the partations looks like the table below, a recovery partation about 1G at the tail of the disk but I don't care:  
 
       EFI (200 M) | partation for c: (>200G)
 
@@ -57,7 +57,7 @@ use Windows disk manage tools to shrink C: partation, make room for two new part
 
       EFI (200 M) | partation for c: (>100G) | EFI_new(200M) | MacOS (~70G)
 
-Then use EFI recovery/transfer tool make a Windows EFI on EFI_new, delete old EFI, copy Opencore EFI to old EFI, the idea is use Opencore EFI to replace Windows EFI so computer will boot Opencore EFI, Opencore EFI is able to find Windows EFI( stored in EFI_new) and boot it for you. this how dual boot works.  
+Then use EFI recovery/transfer tool make a Windows EFI on EFI_new, delete EFI directory from old EFI partation , copy Opencore EFI directory to old EFI partation , the idea is to use Opencore EFI to replace Windows EFI so computer will boot Opencore EFI, Opencore EFI is able to find Windows EFI( stored in EFI_new) and boot it for you. this how dual boot works.  
 There are many ways for doing dual boot, I just pick the dummy method. 
 ### Install Mac OS
 The installation process may hung at some places, twick USB BIOS settings should solve the issue.  
