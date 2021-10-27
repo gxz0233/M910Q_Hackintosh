@@ -1,4 +1,4 @@
-# Lenovo M910Q Hackintosh
+# Lenovo M910Q tiny Hackintosh
 ## Lenovo M910Q tiny 
 This M910Q bought used with :
 * Intel(R) Core(TM) i5-7500T CPU @ 2.70GHz , Kaby Lake platform
@@ -45,6 +45,7 @@ Tools:
   * XHCI-unsupported.kext
 ### BIOS
 * Turn off securiy boot
+* Set video RAM to 64MB
 * USB
   * Turn on Legacy support
   * Turn on XHCI support( I forgot exact name, but should not matter)
