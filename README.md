@@ -25,12 +25,13 @@ Follow [ OpenCore Install Guide for Desktop Kaby Lake ](https://dortania.github.
 Tools:
 * ProperTree(Windows)
 * tools for updating config.plist on USB disk, there is so many tools out there, I use DiskGenius(Windows)
+### CFGLock.efi
+CFGLock.efi is needed to unlock CFG, it's in OC->Tools directory, Follow the [ instruction ](https://www.tonymacx86.com/threads/guide-unlocking-cfg-with-opencore-and-cfglock-efi.305163/). Run the tool from boot mean config the value to 0(disable)
 ### Drivers and Kexts
 * Drivers
   * HfsPlus.efi
   * OpenCanopy.efi
   * OpenRuntime.efi
-
 * Kexts
   * AppleALC.kext
   * Innie.kext
