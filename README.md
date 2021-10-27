@@ -68,7 +68,8 @@ After a version of big sur, MacOS do not support more than 15 USB ports, so USB 
 The good news Windows is very friendly for discovering hardware , Windows should has no problem to find and install driver for this card, you can use this Windows tool: [USBToolBox](https://github.com/USBToolBox/tool/releases) to create a USB ports mapping Kexts under Windows, then put them in Kexts directory. 
 
   * USBToolBox.kext
-  * UTBMap.kext
+  * UTBMap.kext 
+
 These two Kexts are only thing you need to install Wifi+Bluetooth card under M910Q MacOS. Bluetooth should work after a reboot. 
 ![](Docs/Images/1.png)
 ![](Docs/Images/Inked2_LI.jpg)
