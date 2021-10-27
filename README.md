@@ -1,4 +1,4 @@
-# M910Q_Hackintosh
+# Lenovo M910Q Hackintosh
 ## Lenovo M910Q tiny 
 This M910Q bought used with :
 * Intel(R) Core(TM) i5-7500T CPU @ 2.70GHz , Kaby Lake platform
