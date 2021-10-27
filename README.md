@@ -14,7 +14,8 @@ Upgrading with:
 * Install Python on Windows, Python is required for some Windows Tools.
 * Download [Opencore](https://github.com/acidanthera/OpenCorePkg/releases), I am using release 0.7.4 here.
 ### Mac OS
-* Mac OS big sur 11.6. I have update to MacOS 12.0.1 Monterey without any issue on 10/26/2021.  
+* Mac OS big sur 11.6. I have update to MacOS 12.0.1 Monterey without any issue on 10/26/2021. 
+* ![](Docs/Images/Monterey.png) 
 * Make a bootable USB disk follow [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html)
 ### ACPI SSDT
 M910Q only need one customized SSDT-PLUG.aml in ACPI directory, you may need to build your own .aml file for your computer in case your hardware is diffrent to mine even they all named M910Q. Tools:
