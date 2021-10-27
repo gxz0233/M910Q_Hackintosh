@@ -11,19 +11,19 @@ Upgrading with:
 ![](Docs/Images/5.png)
 ## Hackintosh steps
 ### Opencore
-* Install Python on Windows
+* Install Python on Windows, Python is required for some Windows Tools.
 * Download [Opencore](https://github.com/acidanthera/OpenCorePkg/releases), I am using release 0.7.4 here.
 ### Mac OS
 * Mac OS big sur 11.6. 
 * Make a bootable USB disk follow [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html)
 ### ACPI SSDT
-M910Q only need one customized SSDT-PLUG.aml in ACPI directory, it created for each computer. Tools:
+M910Q only need one customized SSDT-PLUG.aml in ACPI directory, you may need to build your own .aml file for your computer in case your hardware is diffrent to mine even they all named M910Q. Tools:
 * SSDTTime (Windows)
 ### config.plist
-Follow   [ OpenCore Install Guide for Desktop Kaby Lake ](https://dortania.github.io/OpenCore-Install-Guide/config.plist/kaby-lake.htmlhttp://google.com). make your own config.plist, the steps are not hard at all. 
+Follow [ OpenCore Install Guide for Desktop Kaby Lake ](https://dortania.github.io/OpenCore-Install-Guide/config.plist/kaby-lake.htmlhttp://google.com). make your own config.plist, the steps are not hard at all. 
 Tools:
 * ProperTree(Windows)
-* tools for updating config.plist on USB disk, there is so many tools out there, I used DiskGenius(Windows)
+* tools for updating config.plist on USB disk, there is so many tools out there, I use DiskGenius(Windows)
 ### Drivers and Kexts
 * Drivers
   * HfsPlus.efi
@@ -38,8 +38,8 @@ Tools:
   * NVMeFix.kext
   * SMCProcessor.kext
   * SMCSuperIO.kext
-  * USBToolBox.kext (for USB ports mapping, created in later step)
-  * UTBMap.kext (for USB ports mapping, created in later step)
+  * USBToolBox.kext 
+  * UTBMap.kext (for USB ports mapping, created in later step by USBToolBox)
   * VirtualSMC.kext
   * WhateverGreen.kext
   * XHCI-unsupported.kext
@@ -64,11 +64,12 @@ The installation process may hung at some places, twick USB BIOS settings should
 After these steps, the M910Q has Windows and MacOS installed. 
 ![](Docs/Images/4.png)
 ### USB ports mapping
-After some version of big sur, MacOS can not support more than 15 USB ports, so USB mapping is necessary if your motherboard has more than 15 USB ports. For M910Q, Bluetooth is not functioning because MacOS couldn't find the right USB ports for the card. use this Windows tool: [USBToolBox](https://github.com/USBToolBox/tool/releases) to create two Kexts, then put them in Kexts directory. 
+After a version of big sur, MacOS do not support more than 15 USB ports, so USB mapping is necessary if your motherboard has more than 15 USB ports. For M910Q, Bluetooth is not functioning because MacOS couldn't find the right USB ports associate with card.  
+The good news Windows is very friendly for discovering hardware , Windows should has no problem to find and install driver for this card, you can use this Windows tool: [USBToolBox](https://github.com/USBToolBox/tool/releases) to create a USB ports mapping Kexts under Windows, then put them in Kexts directory. 
 
   * USBToolBox.kext
   * UTBMap.kext
-These two Kexts are only thing you need for M910Q. Bluetooth should work after a reboot. 
+These two Kexts are only thing you need to install Wifi+Bluetooth card under M910Q MacOS. Bluetooth should work after a reboot. 
 ![](Docs/Images/1.png)
 ![](Docs/Images/Inked2_LI.jpg)
 ![](Docs/Images/3.png)
