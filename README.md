@@ -72,7 +72,7 @@ The good news Windows is very friendly for discovering hardware , Windows should
 
 These two Kexts are only thing you need to install Wifi+Bluetooth card under M910Q MacOS. Bluetooth should work after a reboot. 
 ![](Docs/Images/1.png)
-![](Docs/Images/Inked2_LI.jpg)
+![](Docs/Images/Inked2_LI.png)
 ![](Docs/Images/3.png)
 ## Remaining issues
 Sleep not working, it can not recovery after a long sleep, you have to hard reset the computer. 
